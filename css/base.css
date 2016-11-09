@@ -1,107 +1,55 @@
 * {
   box-sizing: border-box;
   line-height: 150%;
+  background: rgba(0,0,0,0.1);
 }
 
+body{
+  background: #00334b;
+  color:white;
+}
 .container {
-  width: 80%;
-  max-width: 1000px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 h1 {
   text-align: center;
 }
-
-.content {
-  width: 60%;
-  margin: 0 auto;
+.task-list{
+  margin:5px 0;
 }
-
-.todo-search input[type="text"] {
-  width: 88%;
-  padding: 4px 10px;
-  /*box-shadow: 0 0 1px #000;*/
-}
-
-.todo-search input[type="submit"] {
-  width: 10%;
-}
-
-input[type="radio"] {
-  cursor: pointer;
-}
-
-input[type="submit"] {
-  cursor:pointer;
-  border: none;
-  background: #9191f7;
-  border-radius: 10px;
-  color: white;
-}
-
-.todo-result {
-  margin-top: 10px;
-}
-
-.todo-item {
-  margin-bottom: 10px;
-  height: 30px;
-  line-height: 30px;
-  padding-left: 10px;
-}
-
-.todo-item:hover {
-  cursor: pointer;
-  background: #e0dbdb;
-  transition: background 0.1s;
-}
-
-.btn-list {
-  width: 5%;
-}
-
-.todo-list {
-  width: 88%;
-  display: inline-block;
-}
-
-
-/*popup part*/
-
-.todo-popup {
-  width: 80%;
-  margin: 0 auto;
-  border: 1px solid #9c7575;
-  height: 400px;
-  padding: 20px;
-  position: relative;
-}
-
-.popup-header {
-  height: 40px;
-  line-height: 40px;
-  font-size: 24px;
-}
-
-.popup-close {
-  position: absolute;
-  right: -14px;
-  top: -18px;
+.task-item{
   background: white;
-  font-size: 24px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid #9c7575;
-  text-align: center;
-  line-height: 30px;
+  color:#333;
+  margin-bottom:2px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.2);
+  cursor:pointer;
+  transition: background .1s;
 }
-
-.popup-detail {}
-
-input[type="date"] {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+.task-item:hover{
+  background:#ddd;
+}
+input[type="text"], input[type="date"]{
+  width: 100%;
+  display: block;
+  background:white;
+  border:0;
+}
+input, .task-item, button{
+  padding: 10px;
+  border-radius:3px;
+}
+button{
+  display: inline-block;
+  border:0;
+  cursor:pointer;
+}
+.add-task input[type='text']{
+  float:left;
+  width: 84%;
+  margin-right:1%;
+}
+.add-task [type='submit']{
+  width: 15%;
 }
